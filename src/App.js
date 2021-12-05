@@ -18,28 +18,74 @@ export default function App() {
   }
   return (
     <div className="App">
-      <h1>Emoji Checker</h1>
-      <input onChange={inputHandler}></input>
-      <h1>{showText} </h1>
-      <div class={"emojiHolder"}>
-        {emojis.map((e, index) => {
-          return (
-            <span
-              style={{ fontSize: "2rem", padding: "1rem", cursor: "pointer" }}
-              key={e}
-              onClick={() => clickEmoji(e)}
+      <nav class="navigation">
+        <div class="nav-brand">Emoji Checker</div>
+        <ul class="list-non-bullet nav-pills list-on-one-line">
+          <li class="list-item-inline">
+            <a class="link link-active" href="https://zoef-shaikh.netlify.app/">
+              Home
+            </a>
+          </li>
+          <li class="list-item-inline">
+            <a
+              class="link"
+              href="https://zoef-shaikh.netlify.app/projects.html"
             >
-              {e}
-            </span>
-          );
-        })}
+              Projects
+            </a>
+          </li>
+          <li class="list-item-inline">
+            <a class="link" href="https://zoef-shaikh.netlify.app/blog.html">
+              Blog
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class={"container"}>
+        <input onChange={inputHandler}></input>
+        <h1>{showText} </h1>
+        <div class={"emojiHolder"}>
+          {emojis.map((e, index) => {
+            return (
+              <span
+                style={{ fontSize: "2rem", padding: "1rem", cursor: "pointer" }}
+                key={e}
+                onClick={() => clickEmoji(e)}
+              >
+                {e}
+              </span>
+            );
+          })}
+        </div>
       </div>
+      <footer class="footer">
+        <div class="footer-heading">social media presence</div>
+        <ul class="social-links list-non-bullet list-on-one-line">
+          <li class="list-item-inline">
+            <a class="link" href="https://github.com/zoef-yt">
+              Github
+            </a>
+          </li>
+          <li class="list-item-inline">
+            <a class="link" href="https://twitter.com/zoef_yt">
+              Twitter
+            </a>
+          </li>
+          <li class="list-item-inline">
+            <a
+              class="link"
+              href="https://www.linkedin.com/in/zoef-shaikh-279340201/"
+            >
+              Linkedin
+            </a>
+          </li>
+        </ul>
+      </footer>
     </div>
   );
 }
 
 var emojiDictionary = {
-  "": "",
   "😀": "grinning face",
   "😃": "grinning face with big eyes	face ",
   "😄": "grinning face with smiling eyes	eye ",
@@ -77,46 +123,47 @@ var emojiDictionary = {
   "😑": "expressionless face	expressionless ",
   "😶": "face without mouth	face ",
   "😏": "smirking face",
-  "😒": "unamused face	face",
+  "😒": "unamused face	",
   "🙄": "face with rolling eyes	eyeroll  ",
-  "😬": "grimacing face	face ",
+  "😬": "grimacing face	 ",
   "🤥": "lying face	",
-  "😌": "relieved face	face",
-  "😔": "pensive face	dejected ",
-  "😪": "sleepy face	face ",
-  "🤤": "drooling face	drooling",
-  "😴": "sleeping face	face ",
+  "😌": "relieved face	",
+  "😔": "pensive face	 ",
+  "😪": "sleepy face	 ",
+  "🤤": "drooling face	",
+  "😴": "sleeping face	 ",
   "😷": "face with medical mask	cold",
-  "🤒": "face with thermometer	face",
-  "🤕": "face with head-bandage	bandage  ",
-  "🤢": "nauseated face	face",
-  "🤮": "face vomiting	face vomiting ",
-  "🤧": "sneezing face	face",
+  "🤒": "face with thermometer	",
+  "🤕": "face with head-bandage	  ",
+  "🤢": "nauseated face	",
+  "🤮": "face vomiting	  ",
+  "🤧": "sneezing face	",
   "🥵": "hot face	feverish  ",
   "🥶": "cold face	blue-faced ",
   "🥴": "woozy face	dizzy",
   "😵": "face with crossed-out eyes	",
   "😕": "confused face	confused ",
-  "😟": "worried face	face",
-  "🙁": "slightly frowning face	face ",
-  "😮": "face with open mouth	face ",
-  "😯": "hushed face	face",
+  "😟": "worried face	",
+  "🙁": "slightly frowning face	 ",
+  "😮": "face with open mouth	 ",
+  "😯": "hushed face	",
   "😲": "astonished face	astonished",
   "😳": "flushed face	dazed ",
   "🥺": "pleading face	begging  ",
   "😦": "frowning face with open mouth",
   "😧": "anguished face	anguished ",
-  "😨": "fearful face	face ",
+  "😨": "fearful face	 ",
   "😰": "anxious face with sweat",
-  "😥": "sad but relieved face	disappointed ",
-  "😢": "crying face	cry",
-  "😭": "loudly crying face	cry ",
-  "😱": "face screaming in fear	face ",
+  "😥": "sad but relieved face	 ",
+  "😢": "crying face	",
+  "😭": "loudly crying face	 ",
+  "😱": "face screaming in fear	 ",
   "😖": "confounded face	confounded ",
   "😣": "persevering face	face ",
-  "😞": "disappointed face	disappointed",
+  "😞": "disappointed face	",
   "😓": "downcast face with sweat	cold",
-  "😩": "weary face	face",
-  "😫": "tired face	face ",
-  "🥱": "yawning face	bored "
+  "😩": "weary face	",
+  "😫": "tired face	 ",
+  "🥱": "yawning face	bored ",
+  "": ""
 };
